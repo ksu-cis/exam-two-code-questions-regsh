@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
 
 namespace ExamTwoCodeQuestions.Data
@@ -11,9 +10,9 @@ namespace ExamTwoCodeQuestions.Data
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private FruitFilling fruit;
+        private FruitFilling fruit = FruitFilling.Peach;
         /// <summary>
-        /// The fruit used in the cobbler
+        /// The fruit used in the cobbler, peach by default
         /// </summary>
         public FruitFilling Fruit
         {
@@ -36,6 +35,7 @@ namespace ExamTwoCodeQuestions.Data
                 withIceCream = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WithIceCream"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
             }
         }
         /// <summary>
@@ -57,11 +57,11 @@ namespace ExamTwoCodeQuestions.Data
         {
             get
             {
-                if(WithIceCream) { return new List<string>(); }
+                if (WithIceCream) { return new List<string>(); }
                 else { return new List<string>() { "Hold Ice Cream" }; }
             }
         }
 
-        
+
     }
 }
