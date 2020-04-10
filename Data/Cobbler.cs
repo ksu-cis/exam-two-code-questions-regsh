@@ -21,6 +21,9 @@ namespace ExamTwoCodeQuestions.Data
             {
                 fruit = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Fruit"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Blueberry"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Peach"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Cherry"));
             }
         }
         private bool withIceCream = true;
@@ -62,6 +65,11 @@ namespace ExamTwoCodeQuestions.Data
             }
         }
 
+        public bool Peach { get => Fruit == FruitFilling.Peach; }
+
+        public bool Blueberry { get => Fruit == FruitFilling.Blueberry; }
+
+        public bool Cherry { get => Fruit == FruitFilling.Cherry; }
 
     }
 }

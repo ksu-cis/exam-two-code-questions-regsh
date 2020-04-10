@@ -7,6 +7,22 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <TextBlock>Customize Cobbler</TextBlock>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <TextBlock FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold">Customize Cobbler</TextBlock>
+        <StackPanel Orientation="Vertical" Grid.Row="1">
+            <TextBlock FontSize="40" Margin="20" >Filling Type:</TextBlock>
+            <RadioButton GroupName="Filling" FontSize="25" Margin="5" VerticalContentAlignment="Center" Checked="{Binding Path=Peach}">Peach</RadioButton>
+            <RadioButton GroupName="Filling" FontSize="25" Margin="5" VerticalContentAlignment="Center" Checked="{Binding Path=Blueberry}">Blueberry</RadioButton>
+            <RadioButton GroupName="Filling" FontSize="25" Margin="5" VerticalContentAlignment="Center" Checked="{Binding Path=Cherry}">Cherry</RadioButton>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" VerticalAlignment="Center">
+            
+            <CheckBox IsChecked="{Binding Path=WithIceCream}" VerticalAlignment="Center" Margin="20"/>
+            <Label Grid.Row="2" FontSize="40" >Ice Cream</Label>
+        </StackPanel>
     </Grid>
 </UserControl>
