@@ -64,12 +64,53 @@ namespace ExamTwoCodeQuestions.Data
                 else { return new List<string>() { "Hold Ice Cream" }; }
             }
         }
+        /// <summary>
+        /// Whether the filling of the cobbler is Peach
+        /// used for conversion to bool value for radio button display
+        /// </summary>
+        public bool Peach
+        {
+            get => Fruit == FruitFilling.Peach;
+            set
+            {
+                if (value == true && Fruit != FruitFilling.Peach)
+                {
+                    Fruit = FruitFilling.Peach;
+                }
 
-        public bool Peach { get => Fruit == FruitFilling.Peach; }
+            }
+        }
+        /// <summary>
+        /// Whether the filling of the cobbler is Blueberry
+        /// used for conversion of Fruit to bool value for radio button display
+        /// </summary>
+        public bool Blueberry
+        {
+            get => Fruit == FruitFilling.Blueberry;
+            set
+            {
+                if (value == true && Fruit != FruitFilling.Blueberry)
+                {
+                    Fruit = FruitFilling.Blueberry;
+                }
+            }
+        }
 
-        public bool Blueberry { get => Fruit == FruitFilling.Blueberry; }
-
-        public bool Cherry { get => Fruit == FruitFilling.Cherry; }
+        /// <summary>
+        /// Whether the filling of the cobbler is Cherry
+        /// Used for conversion of Fruit to bool value for radio button display
+        /// </summary>
+        public bool Cherry
+        {
+            get => Fruit == FruitFilling.Cherry;
+            set
+            {
+                if (value == true && Fruit != FruitFilling.Cherry)
+                {
+                    Fruit = FruitFilling.Cherry;
+                }
+            }
+        }
 
     }
 }

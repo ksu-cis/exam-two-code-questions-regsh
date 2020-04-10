@@ -24,26 +24,6 @@ namespace ExamTwoQuestions.PointOfSale
             InitializeComponent();
         }
 
-        public void OnClickBlueberry(object sender, RoutedEventArgs e)
-        {
-            if(DataContext is Cobbler cobbler)
-            {
-                if(cobbler.Fruit != FruitFilling.Blueberry)
-                {
-                    cobbler.Fruit = FruitFilling.Blueberry;
-                  
-                }
-            }
-        }
-
-        public void OnClickPeach()
-        {
-
-        }
-
-        public void OnClickCherry()
-        {
-
-        }
+        
     }
 }

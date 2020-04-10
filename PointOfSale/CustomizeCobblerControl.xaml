@@ -12,17 +12,29 @@
             <RowDefinition Height="3*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <TextBlock FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold">Customize Cobbler</TextBlock>
-        <StackPanel Orientation="Vertical" Grid.Row="1">
-            <TextBlock FontSize="40" Margin="20" >Filling Type:</TextBlock>
-            <RadioButton GroupName="Filling" FontSize="25" Margin="5" VerticalContentAlignment="Center" Checked="{Binding Path=Peach}">Peach</RadioButton>
-            <RadioButton GroupName="Filling" FontSize="25" Margin="5" VerticalContentAlignment="Center" Checked="{Binding Path=Blueberry}">Blueberry</RadioButton>
-            <RadioButton GroupName="Filling" FontSize="25" Margin="5" VerticalContentAlignment="Center" Checked="{Binding Path=Cherry}">Cherry</RadioButton>
+        <TextBlock FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold">Customize Your Cobbler</TextBlock>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Vertical" Grid.Row="1">
+                <TextBlock FontSize="30" Margin="20" >Filling Type:</TextBlock>
+                <RadioButton GroupName="Filling" FontSize="20" Margin="20,5" VerticalContentAlignment="Center" IsChecked="{Binding Path=Peach}" >Peach</RadioButton>
+                <RadioButton GroupName="Filling" FontSize="20" Margin="20,5" VerticalContentAlignment="Center" IsChecked="{Binding Path=Blueberry}" >Blueberry</RadioButton>
+                <RadioButton GroupName="Filling" FontSize="20" Margin="20,5" VerticalContentAlignment="Center" IsChecked="{Binding Path=Cherry}">Cherry</RadioButton>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="2" VerticalAlignment="Center" Grid.Column="1">
+
+                <CheckBox IsChecked="{Binding Path=WithIceCream}" VerticalAlignment="Center" Margin="20"/>
+                <Label Grid.Row="2" FontSize="30" >Ice Cream</Label>
+            </StackPanel>
+        </Grid>
+        <StackPanel Orientation="Horizontal" Grid.Row="2">
+            <TextBlock FontSize="25" FontWeight="Bold" VerticalAlignment="Center" Margin="20,0">Price:</TextBlock>
+            <TextBlock FontSize="25" VerticalAlignment="Center" Text="{Binding Path=Price, StringFormat='C'}"/>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Grid.Row="2" VerticalAlignment="Center">
-            
-            <CheckBox IsChecked="{Binding Path=WithIceCream}" VerticalAlignment="Center" Margin="20"/>
-            <Label Grid.Row="2" FontSize="40" >Ice Cream</Label>
-        </StackPanel>
+        
+
     </Grid>
 </UserControl>
